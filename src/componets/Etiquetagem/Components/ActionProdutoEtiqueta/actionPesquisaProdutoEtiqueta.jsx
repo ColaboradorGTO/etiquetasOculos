@@ -31,7 +31,11 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
   const [modalImprimirEtiquetaOculos, setModalImprimirEtiquetaOculos] = useState(false);
   const [selectAll, setSelectAll] = useState(false);
   const [selectedIds, setSelectedIds] = useState([]);
-
+  const [idFuncionario] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('idFuncionario');
+  });
+  console.log('ID Funcionario:', idFuncionario);
   const { data: optionsEmpresas = [], error: errorEmpresas, isLoading: isLoadingEmpresas, refetch: refetchEmpresas
   } = useQuery(
     ['empresasLista'],
@@ -231,6 +235,7 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
         linkComponentAnterior={["Home"]}
         linkComponent={[""]}
         title="Etiquetagem"
+        subTitle={`ID Funcionario: ${idFuncionario}`}
 
         InputSelectEmpresaComponent={InputSelectAction}
         labelSelectEmpresa={"Lista de Preços"}
