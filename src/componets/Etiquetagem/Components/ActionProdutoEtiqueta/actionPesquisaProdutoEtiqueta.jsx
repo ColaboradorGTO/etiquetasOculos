@@ -173,6 +173,10 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
     setModalImprimirEtiqueta(true);
   }
 
+  const handleImprimirEtiquetaOculos = () => {
+    setModalImprimirEtiquetaOculos(true);
+  }
+
   const handleAcumuladorEtiquetas = async () => {
     if (produtosSelecionados.length > 0) {
       try {
@@ -291,7 +295,7 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
      
         ButtonTypeVendasVendedor={ButtonType}
         linkNomeVendasVendedor={"Imprimir Etiqueta Oculos"}
-        onButtonClickVendasVendedor={handleImprimirEtiqueta}
+        onButtonClickVendasVendedor={handleImprimirEtiquetaOculos}
         corVendasVendedor={"warning"}
         iconVendasVendedor={MdOutlineLocalPrintshop}
         styleVendedor={{ display: btnVisivel || dadosAcumuladorEtiquetas.length > 0 ? 'block' : 'none' }}
