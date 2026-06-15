@@ -1,0 +1,76 @@
+.etiqueta-oculos-page {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    position: relative;
+    margin: 1%;
+    min-width: 640px !important;
+    max-width: 100% !important;
+    height: 4cm;
+    background: white;
+    -webkit-box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    padding: 2rem 0 0 2rem;
+}
+
+.border-dark {
+    border-color: #505050 !important;
+}
+.codbarras-oculos {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  
+}
+
+
+.preco-oculos {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.etiqueta-oculos-card-preco {
+    min-width: 25%;
+    max-width: 35%;
+    height: 2.5cm;
+    margin-right: 2%;
+    margin-bottom: 0.5in;
+    padding: 0px !important;
+    box-sizing: border-box;
+    border: 0.5px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.etiqueta-oculos-card {
+    min-width: 32%;
+    max-width: 35%;
+    height: 2.5cm;
+    margin-right: 2%;
+    margin-bottom: 0.5in;
+    padding: 0px !important;
+    box-sizing: border-box;
+    border: 0.5px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rounded {
+    border-radius: 4px !important;
+}
+
+.etiqueta-oculos-page-number {
+    position: absolute;
+    top: 82%;
+    left: 1%;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}

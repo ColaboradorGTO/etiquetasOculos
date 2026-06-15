@@ -1,0 +1,350 @@
+{
+  "Parceiro": [
+    {
+      "id": 1,
+      "label": "Selecione...",
+      "value": "0"
+    },
+    {
+      "id": 2,
+      "label": "Funcionário",
+      "value": "FUNCIONARIO"
+    },
+    {
+      "id": 3,
+      "label": "Parceiro de Negócios Apoio",
+      "value": "PN"
+    },
+    {
+      "id": 4,
+      "label": "Parceiro de Negócios PJ",
+      "value": "PN"
+    },
+    {
+      "id": 5,
+      "label": "Marketing",
+      "value": "MARKETING"
+    },
+    {
+      "id": 6,
+      "label": "PN PJ",
+      "value": "PN PJ"
+    }
+  ],
+  "optionsTipoFrete": [
+    {
+      "value": "PAGO",
+      "label": "PAGO - CIF"
+    },
+    {
+      "value": "APAGAR",
+      "label": "A PAGAR - FOB"
+    }
+  ],
+  "optionsTipoFreteComercial": [
+    {
+      "value": "0",
+      "label": "Emitente"
+    },
+    {
+      "value": "1",
+      "label": "Destinatário"
+    },
+    {
+      "value": "2",
+      "label": "Terceiros"
+    },
+    {
+      "value": "9",
+      "label": "Sem Frete"
+    }
+  ],
+  "optionsTipoPedido": [
+    {
+      "value": "VESTUARIO",
+      "label": "VESTUÁRIO"
+    },
+    {
+      "value": "CALCADOS",
+      "label": "CALÇADOS"
+    },
+    {
+      "value": "ARTIGOS",
+      "label": "ARTIGOS"
+    },
+    {
+      "value": "ACESSORIOS",
+      "label": "ACESSÓRIOS"
+    }
+  ],
+  "optionsTipoCategoria": [
+    { "value": "VESTUARIO", "label": "VESTUARIO" },
+    { "value": "CALCADOS", "label": "CALCADOS" },
+    { "value": "ARTIGOS", "label": "ARTIGOS" }
+  ],
+  "optionsEnviar": [
+    {
+      "value": "NE",
+      "label": "NÃO ENVIAR"
+    },
+    {
+      "value": "ET",
+      "label": "ETIQUETA"
+    },
+    {
+      "value": "AR",
+      "label": "ARQUIVO"
+    }
+  ],
+  "optionsFiscal": [
+    {
+      "value": "S",
+      "label": "Simples Nacional"
+    },
+    {
+      "value": "N",
+      "label": "Lucro Presumido"
+    },
+    {
+      "value": "R",
+      "label": "Lucro Real"
+    }
+  ],
+  "situacao": [
+    {
+      "label": "ATIVO",
+      "value": "True"
+    },
+    {
+      "label": "INATIVO",
+      "value": "False"
+    }
+  ],
+  "localizacao": [
+    {
+      "label": "Loja",
+      "value": "True"
+    },
+    {
+      "label": "Escritório",
+      "value": "False"
+    }
+  ],
+  "InscricaoEstadual": [
+    {
+      "label": "Contribuinte ICMS",
+      "value": "1"
+    },
+    {
+      "label": "Contribuinte Isento de IE",
+      "value": "2"
+    },
+    {
+      "label": "Não Contribuinte Com ou Sem IE",
+      "value": "9"
+    }
+  ],
+  "Departamentos": [
+    {
+      "label": "Administrativo",
+      "value": "ADMINISTRATIVO"
+    },
+    {
+      "label": "Gerência",
+      "value": "GERENCIA"
+    },
+    {
+      "label": "TI",
+      "value": "TI"
+    },
+    {
+      "label": "Financeiro",
+      "value": "FINANCEIRO"
+    },
+    {
+      "label": "Comercial",
+      "value": "COMERCIAL"
+    },
+    {
+      "label": "Compras",
+      "value": "COMPRAS"
+    },
+    {
+      "label": "Contabilidade",
+      "value": "CONTABILIDADE"
+    },
+    {
+      "label": "Marketing",
+      "value": "MARKETING"
+    },
+    {
+      "label": "RH",
+      "value": "RH"
+    },
+    {
+      "label": "Cadastro",
+      "value": "CADASTRO"
+    },
+    {
+      "label": "CD",
+      "value": "CD"
+    },
+    {
+      "label": "Controladoria",
+      "value": "CONTROLADORIA"
+    },
+    {
+      "label": "DP",
+      "value": "DP"
+    },
+    {
+      "label": "Prevenção e Perdas",
+      "value": "PREVENCAOPERDAS"
+    },
+    {
+      "label": "PSF",
+      "value": "PSF"
+    }
+  ],
+  "optionsQuebraDeCaixa": [
+    {
+      "value": "",
+      "label": "Todas"
+    },
+    {
+      "value": "Positiva",
+      "label": "Positiva"
+    },
+    {
+      "value": "Negativa",
+      "label": "Negativa"
+    }
+  ],
+  "optionsQuebraDeCaixaADM": [
+    {
+      "value": "0",
+      "label": "Todas"
+    },
+    {
+      "value": "1",
+      "label": "Positiva"
+    },
+    {
+      "value": "2",
+      "label": "Negativa"
+    }
+  ],
+  "optionsUF": [
+    {
+      "value": "",
+      "label": "Todos"
+    },
+    {
+      "value": "DF",
+      "label": "DF"
+    },
+    {
+      "value": "GO",
+      "label": "GO"
+    }
+  ],
+  "optionsParcelas": [
+    { "value": "0", "label": "Selecionar Todas" },
+    { "value": "1", "label": "1" },
+    { "value": "2", "label": "2" },
+    { "value": "3", "label": "3" },
+    { "value": "4", "label": "4" },
+    { "value": "5", "label": "5" },
+    { "value": "6", "label": "6" },
+    { "value": "7", "label": "7" },
+    { "value": "8", "label": "8" },
+    { "value": "9", "label": "9" },
+    { "value": "10", "label": "10" },
+    { "value": "11", "label": "11" },
+    { "value": "12", "label": "12" }
+  ],
+  "optionComissoes": [
+    {  "value": "0", "label": "Nenhum" },
+    {  "value": "1", "label": "2%" },
+    {  "value": "2", "label": "4%" },
+    {  "value": "3", "label": "6%" }
+  ],
+  "optionsParcelado": [
+    { "value": "True", "label": "SIM" },
+    { "value": "False", "label": "NÃO" }
+  ],
+  "optionsReposicao": [
+    { "value": "True", "label": "SIM" },
+    { "value": "False", "label": "NÃO" }
+  ],
+  "optionsTipoCadastro": [
+    { "value": "True", "label": "POR REFERÊNCIA" },
+    { "value": "False", "label": "NORMAL" }
+  ],
+  "optionsAlteracaoPreco": [
+    { "value": "True", "label": "CANCELADA" },
+    { "value": "False", "label": "EM ESPERA" },
+    { "value": "FINALIZADA", "label": "FINALIZADA" }
+  ],
+  "optionsSap": [
+    { "value": "0", "label": "Todas" },
+    { "value": "1", "label": "Migradas SAP" },
+    { "value": "2", "label": "Não Migradas SAP" }
+  ],
+  "optionsDataMalote": [
+    { "value": "Malote", "label": "Data Caixa" },
+    { "value": "Conferido", "label": "Data Conferido" }
+  ],
+  "optionsStatusMalote": [
+   { "value": "", "label": "Selecione um Status" },
+    { "value": "Pendente de Envio", "label": "Pendente de Envio" },
+    { "value": "Enviado", "label": "Enviado" },
+    { "value": "Recepcionado", "label": "Recepcionado" },
+    { "value": "Devolvido", "label": "Devolvido"},
+    { "value": "Conferido", "label": "Conferido"},
+    { "value": "Reenviado", "label": "Reenviado"}
+  ],
+  "optionsFuncoesComercial": [
+    { "value": "GERENTE", "label": "GERENTE" },
+    { "value": "LIDER DE LOJA", "label": "LIDER DE LOJA" },
+    { "value": "LIDER DE CAIXA", "label": "LIDER DE CAIXA" },
+    { "value": "LIDER SUBGERENTE", "label": "LIDER SUBGERENTE" },
+    { "value": "OPERADOR DE CAIXA", "label": "OPERADOR DE CAIXA" },
+    { "value": "ASSISTENTES", "label": "ASSISTENTES" },
+    { "value": "MULTIPLICADOR", "label": "MULTIPLICADOR" },
+    { "value": "PROVADOR", "label": "PROVADOR" },
+    { "value": "FISCAL", "label": "FISCAL" },
+    { "value": "VENDEDOR", "label": "VENDEDOR" }
+  ],
+  "optionsIndicadores": [
+    { "value": "CONFECÇÃO", "label": "CONFECÇÃO" },
+    { "value": "CALÇADOS", "label": "CALÇADOS" },
+    { "value": "TICKET-MÉDIO", "label": "TICKET-MÉDIO" },
+    { "value": "CARTÃO/ATIVAÇÃO", "label": "CARTÃO/ATIVAÇÃO" },
+    { "value": "CARTÃO PCJ 30%", "label": "CARTÃO PCJ 30%" },
+    { "value": "CARTÃO/RECOMPRA", "label": "CARTÃO/RECOMPRA" },
+    { "value": "CARTÃO/SEGURO", "label": "CARTÃO/SEGURO" }
+  ],
+  "optionsApuracao": [
+    { "value": "NENHUMA", "label": "NENHUMA" },
+    { "value": "INDIVIDUAL", "label": "INDIVIDUAL" },
+    { "value": "GERAL DA LOJA", "label": "GERAL DA LOJA" },
+    { "value": "GERAL DA CONFEÇÇÃO", "label": "GERAL DA CONFEÇÇÃO" },
+    { "value": "INDIVIDUAL / GERAL", "label": "INDIVIDUAL / GERAL" }
+  ],
+  "optionsIcms": [
+    { "value": "0", "label": "Selecione um ICMS" },
+    { "value": "100030", "label": "100030 - ICMS Transporte" },
+    { "value": "100048", "label": "100048 - ICMS Substituição Tributária por Apuração" },
+    { "value": "100056", "label": "100056 - ICMS Importação" },
+    { "value": "100064", "label": "100064 - ICMS Autuação Fiscal" },
+    { "value": "100080", "label": "100080 - ICMS Recolhimentos Especiais" },
+    { "value": "100099", "label": "100099 - ICMS Substituição Tributária por Operação" },
+    { "value": "100102", "label": "100102 - ICMS Consumidor Final Não Contribuinte Outra UF por Operação" },
+    { "value": "100110", "label": "100110 - ICMS Consumidor Final Não Contribuinte Outra UF por Apuração" },
+    { "value": "100129", "label": "100129 - ICMS Fundo Estadual de Combate à Pobreza por Operação" },
+    { "value": "100137", "label": "100137 - ICMS Fundo Estadual de Combate à Pobreza por Apuração" },
+    { "value": "100153", "label": "100153 - ICMS Monofásico por Operação" },
+    { "value": "100161", "label": "100161 - ICMS Monofásico por Apuração" }
+  ]
+}

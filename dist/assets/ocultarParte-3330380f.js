@@ -1,0 +1,1 @@
+const a=e=>{if(e){var s=""+e,r=s.substring(0,5)+s.substring(5,s.length-4).replace(/[0-9]/g,"*")+s.substring(s.length-4);return r}else return console.error("O parametro(stringParaOcultar) passado para a função(ocultaParteDosDados) está vazio!"),!1};export{a as o};

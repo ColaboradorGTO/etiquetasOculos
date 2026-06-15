@@ -1,0 +1,992 @@
+{
+	"allModulos": [
+		{
+			"id": 1,
+			"nome": "Administrativo",
+			"url": "DashBoardAdministrativo",
+			"src": "./public/img/icons/administrativo.png",
+			"alt": "Imagem modulo administrativo",
+			"users": [
+				{
+					"id": 1,
+					"img": "/web/public/img/myltiane.png",
+					"Cadastro de usuario": "Cadastro de usuario",
+					"Funcionario": "Myltiane Alves de Lima",
+					"Empresa": "001 - TO - Recanto 1 Matriz",
+					"Tipo": "Funcionario",
+					"Função": "OPERADOR (A) DE CAIXA",
+					"Matricula": 459,
+					"CPF": "05368843151",
+					"MotivoDesconto": 20,
+					"Salario": "1.500,00",
+					"DescontoConvenio": 20,
+					"Desconto": 20,
+					"Senha": "1234",
+					"RepetirSenha": "1234",
+					"Ativo": "SIM",
+					"Inativo": "NAO"
+				},
+				{
+					"id": 2,
+					"img": "/web/public/img/myltiane.png",
+					"Cadastro de usuario": "Cadastro de usuario",
+					"Funcionario": "Myltiane Alves de Lima 2",
+					"Empresa": "001 - TO - Recanto 1 Matriz",
+					"Tipo": "Funcionario",
+					"Função": "OPERADOR (A) DE CAIXA",
+					"Matricula": 459,
+					"CPF": "05368843151",
+					"MotivoDesconto": 20,
+					"Salario": "1.500,00",
+					"DescontoConvenio": 20,
+					"Desconto": 20,
+					"Senha": "1234",
+					"RepetirSenha": "1234",
+					"Ativo": "SIM",
+					"Inativo": "NAO"
+				}
+			],
+			"sideBar": [
+				{
+					"id": 1,
+					"title": "Home",
+					"linkText": "Home",
+					"url": "/administrativo/ResumoDashBoardAdministrativo",
+					"icons": "./public/img/icons/home.png"
+				},
+				{
+					"id": 2,
+					"title": "RELATÓRIOS",
+					"linkText": "#",
+					"url": "#"
+				},
+				{
+					"id": 3,
+					"title": "Extrato das Contas Correntes",
+					"linkText": "Extrato das Contas Correntes",
+					"url": "/administrativo/ActionPesquisaExtratoContaCorenteLoja"
+				},
+				{
+					"id": 4,
+					"title": "Formas de Pagamento",
+					"linkText": "Formas de Pagamento",
+					"url": "/administrativo/ActionPesquisaRecebimentosLoja"
+				},
+				{
+					"id": 5,
+					"title": "Vendas por Marcas",
+					"linkText": "Vendas por Marca",
+					"url": "/administrativo/ActionPesquisaVendasMarca"
+				},
+				{
+					"id": 6,
+					"title": "Vendas Digitais",
+					"linkText": "Vendas Digitais",
+					"url": "/administrativo/ActionPesquisaVendasDigitalMarca"
+				},
+				{
+					"id": 7,
+					"title": "Vendas Vendedor",
+					"linkText": "Vendas Vendedor",
+					"url": "/administrativo/ActionPesquisaVendasVendedor"
+				},
+				{
+					"id": 8,
+					"title": "Vendas Convênio",
+					"linkText": "Vendas Convênio",
+					"url": "/administrativo/ActionPesquisaVendasConvenio"
+				},
+				{
+					"id": 9,
+					"title": "Vendas Canceladas",
+					"linkText": "Vendas Canceladas",
+					"url": "/administrativo/ActionPesquisaVendasCanceladas"
+				},
+				{
+					"id": 10,
+					"title": "Vendas Contingência",
+					"linkText": "Vendas Contingência",
+					"url": "/administrativo/ActionPesquisaVendasContigencia"
+				},
+				{
+					"id": 12,
+					"title": "Vendas Desc Funcionário-PN",
+					"linkText": "Vendas Desc Funcionário-PN",
+					"url": "/administrativo/ActionPesquisaVendasDescontoFuncionario"
+				},
+				{
+					"id": 13,
+					"title": "Quebra de Caixas",
+					"linkText": "Quebra de Caixas",
+					"url": "/administrativo/ActionPesquisaQuebraCaixaLoja"
+				},
+				{
+					"id": 14,
+					"title": "Balanço",
+					"linkText": "",
+					"url": "#",
+					"icons": ""
+				},
+				{
+					"id": 15,
+					"title": "Estoque das Lojas",
+					"linkText": "Estoque das Lojas",
+					"url": "/administrativo/ActionPesquisaEstoqueLoja"
+				},
+				{
+					"id": 16,
+					"title": "Preparar Primeiro Balanço Loja",
+					"linkText": "Preparar Primeiro Balanço Loja",
+					"url": "/administrativo/ActionPesquisaPrimeiroBalanco"
+				},
+				{
+					"id": 17,
+					"title": "Balanços das Lojas",
+					"linkText": "Balanço das Lojas",
+					"url": "/administrativo/ActionPesquisaBalancoPorLoja"
+				},
+				{
+					"id": 18,
+					"title": "Balanços das Loja - Avulso",
+					"linkText": "Balanço das Lojas - Avulso",
+					"url": "/administrativo/ActionPesquisaBalancoAvulso"
+				},
+				{
+					"id": 19,
+					"title": "CONSULTAS",
+					"linkText": "",
+					"url": "#",
+					"icons": ""
+				},
+				{
+					"id": 20,
+					"title": "Alteração / Preço",
+					"linkText": "Alteração / Preços",
+					"url": "/administrativo/ActionPesquisaAlteracaoPreco"
+				},
+				{
+					"id": 21,
+					"title": "Produtos / Preços",
+					"linkText": "Produtos / Preços",
+					"url": "/administrativo/ActionPesquisaProdutosPreco"
+				},
+				{
+					"id": 22,
+					"title": "Alterar / Venda",
+					"linkText": "Alterar / Venda",
+					"url": "/administrativo/ActionPesquisaAlterarVendaVendedor"
+				},
+				{
+					"id": 23,
+					"title": "Venda Nº",
+					"linkText": "Venda Nº",
+					"url": "/administrativo/ActionPesquisaVendas"
+				},
+				{
+					"id": 24,
+					"title": "Vendas Para Troca",
+					"linkText": "Vendas Para Troca",
+					"url": "/administrativo/ActionPesquisaVendasVouchers"
+				},
+				{
+					"id": 25,
+					"title": "Vouchers Detalhado",
+					"linkText": "Vouchers Detalhado",
+					"url": "/administrativo/ActionPesquisaConsultaVouchers"
+				},
+				{
+					"id": 26,
+					"title": "Vouchers Resumido",
+					"linkText": "Vouchers Resumido",
+					"url": "/administrativo/ActionPesquisaVoucherResumido"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"nome": "Informatica",
+			"url": "/DashBoardInformatica",
+			"src": "./public/img/icons/informatica.png",
+			"alt": "Imagem modulo informatica",
+			"sideBar": [
+				{
+					"id": 1,
+					"title": "Home",
+					"linkText": "Home",
+					"action": "#",
+					"url": "/informatica/InformaticaActionHome"
+				},
+				{
+					"id": 2,
+					"title": "Vendas",
+					"linkText": "Vendas",
+					"action": "InformaticaActionListaVendas",
+					"url": "/informatica/ActionPesquisaVendas"
+				},
+				{
+					"id": 3,
+					"title": "Funcionários",
+					"linkText": "Funcionários",
+					"action": "ActionPesquisaFuncionarios",
+					"url": "/informatica/ActionPesquisaFuncionarios"
+				},
+				{
+					"id": 4,
+					"title": "Produtos / Preços",
+					"linkText": "Produtos / Preços",
+					"action": "ActionPesquisaProdutosPreco",
+					"url": "/informatica/ActionPesquisaProdutosPreco"
+				},
+				{
+					"id": 5,
+					"title": "Vendas / Alloc",
+					"linkText": "Vendas / Alloc",
+					"action": "ActionPesquisaVendasAlloc",
+					"url": "/informatica/ActionPesquisaVendasAlloc"
+				},
+				{
+					"id": 6,
+					"title": "Vendas / Contingências",
+					"linkText": "Vendas / Contingências",
+					"action": "ActionPesquisaVendasContigencia",
+					"url": "/informatica/ActionPesquisaVendasContigencia"
+				},
+				{
+					"id": 7,
+					"title": "Clientes",
+					"linkText": "Clientes",
+					"action": "ActionPesquisaCliente",
+					"url": "/informatica/ActionPesquisaCliente"
+				},
+				{
+					"id": 9,
+					"title": "Export CSV",
+					"linkText": "Export CSV",
+					"action": "ActionPesquisaExportarDadosCSVCredSystem",
+					"url": "/informatica/ActionPesquisaExportarDadosCSVCredSystem"
+				},
+				{
+					"id": 10,
+					"title": "Relatórios",
+					"linkText": "Relatórios",
+					"action": "ActionPesquisaRelatorioBI",
+					"url": "/informatica/ActionPesquisaRelatorioBI"
+				},
+				{
+					"id": 11,
+					"title": "Link Relatórios",
+					"linkText": "Link Relatórios",
+					"action": "ActionPesquisaLinkRelatorioBi",
+					"url": "/informatica/ActionPesquisaLinkRelatorioBi"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"nome": "Gerencia",
+			"url": "/DashBoardGerencia",
+			"src": "./public/img/icons/gerencia.png",
+			"alt": "Imagem modulo gerencia",
+			"sideBar": [
+				{
+					"id": 0,
+					"title": "Teste",
+					"linkText": "Teste",
+					"url": "/gerencia/ActionTesteExemplo"
+				},
+				{
+					"id": 1,
+					"title": "Home",
+					"linkText": "Home",
+					"url": "/gerencia/ResumoDashBoardGerencia"
+				},
+				{
+					"id": 2,
+					"title": " Lista de Produtos Quality",
+					"linkText": "Lista de Produtos Quality",
+					"url": "/gerencia/ActionPesquisaProdutosQuality"
+				},
+				{
+					"id": 3,
+					"title": "Lista de Produtos SAP",
+					"linkText": "Lista de Produtos SAP",
+					"url": "/gerencia/ActionPesquisaProdutosSap"
+				},
+				{
+					"id": 4,
+					"title": "Lançamentos",
+					"linkText": "Lançamentos",
+					"action": "#"
+				},
+				{
+					"id": 5,
+					"title": "Adiantamento Salário",
+					"linkText": "Adiantamento Salário",
+					"url": "/gerencia/ActionPesquisaAdiantamentoSalarioLoja"
+				},
+				{
+					"id": 6,
+					"title": "Depósitos",
+					"linkText": "Depósitos",
+					"url": "/gerencia/ActionPesquisaDepositoLoja"
+				},
+				{
+					"id": 7,
+					"title": "Despesas",
+					"linkText": "Despesas",
+					"url": "/gerencia/ActionPesquisaDespesaLoja"
+				},
+				{
+					"id": 8,
+					"title": "Vale Transporte",
+					"linkText": "Vale Transporte",
+					"url": "/gerencia/ActionPesquisaValeTransporte"
+				},
+				{
+					"id": 9,
+					"title": "Conferência de Caixas",
+					"linkText": "Conferência de Caixas",
+					"url": "/gerencia/ActionPesquisaConferenciaCaixa"
+				},
+				{
+					"id": 10,
+					"title": "Faturas",
+					"linkText": "Faturas",
+					"url": "/gerencia/ActionPesquisaFaturaLoja"
+				},
+				{
+					"id": 11,
+					"title": "Voucher",
+					"linkText": "Voucher",
+					"url": "/gerencia/ActionPesquisaCreateVoucher"
+				},
+				{
+					"id": 11,
+					"title": "Consultar Voucher",
+					"linkText": "Consultar Voucher",
+					"url": "/gerencia/ActionPesquisaVoucherEmitido"
+				},
+				{
+					"id": 12,
+					"title": "Quebra de Caixas",
+					"linkText": "Quebra de Caixas",
+					"url": "/gerencia/ActionPesquisaQuebraCaixa"
+				},
+				{
+					"id": 12,
+					"title": "Envio de Molotes",
+					"linkText": "Envio de Molotes",
+					"url": "/gerencia/ActionPesquisaConferenciaMalote"
+				},
+				
+				{
+					"id": 13,
+					"title": "Ordem de Transferência",
+					"linkText": "Ordem de Transferência",
+					"url": "/gerencia/ActionPesquisaOT"
+				},
+				{
+					"id": 14,
+					"title": "Relatórios",
+					"linkText": "Relatórios",
+					"url": "#"
+				},
+				{
+					"id": 15,
+					"title": "Alteração Preço",
+					"linkText": "Alteração Preços",
+					"url": "/gerencia/ActionPesquisaAlteracaoPreco"
+				},
+				{
+					"id": 16,
+					"title": "Clientes - Vendas",
+					"linkText": "Clientes - Vendas ",
+					"url": "/gerencia/ActionPesquisaClientesVendas"
+				},
+				{
+					"id": 17,
+					"title": "Extrato das Contas Correntes",
+					"linkText": "Extrato das Contas Correntes",
+					"url": "/gerencia/ActionExtratoDeContasCorrenteLoja"
+				},
+				{
+					"id": 18,
+					"title": "Vendas Loja",
+					"linkText": "Vendas Loja",
+					"url": "/gerencia/ActionPesquisaVendasLojas"
+				},
+				{
+					"id": 19,
+					"title": "Vendas Vendedor",
+					"linkText": "Vendas Vendedor",
+					"url": "/gerencia/ActionPesquisaVendasVendedor"
+				},
+				{
+					"id": 20,
+					"title": "Vendas Estrutura Mercadológica",
+					"linkText": "Vendas Estrutura Mercadológica",
+					"url": "/gerencia/ActionPesquisaVendasEstrutura"
+				},
+				{
+					"id": 21,
+					"title": "Vendas BI",
+					"linkText": "Vendas BI",
+					"url": "/gerencia/ActionRelatorioBI"
+				},
+				{
+					"id": 22,
+					"title": "Vendas Desconto Funcionário-PN",
+					"linkText": "Vendas Desconto Funcionário-PN",
+					"url": "/gerencia/ActionPesquisaVendasDescontoFuncionario"
+				},
+				{
+					"id": 23,
+					"title": "Estoque das Lojas",
+					"linkText": "Estoque das Lojas",
+					"url": "/gerencia/ActionPesquisaEstoqueLoja"
+				},
+				{
+					"id": 24,
+					"title": "Balanço das Lojas",
+					"linkText": "Balanço das Lojas",
+					"url": "/gerencia/ActionPesquisaBalancoLoja"
+				},
+				{
+					"id": 25,
+					"title": "Empresas",
+					"linkText": "Empresas",
+					"url": "/gerencia/ActionPesquisaEmpresas"
+				},
+				{
+					"id": 26,
+					"title": "Metas por Período Teste",
+					"linkText": "Metas por Período Teste",
+					"url": "/gerencia/GerenciaActionListaTeste"
+				}
+			]
+		},
+		{
+			"id": 4,
+			"nome": "Comercial",
+			"url": "/DashBoardComercial",
+			"src": "./public/img/icons/comercial.png",
+			"alt": "Imagem modulo comercial",
+			"sideBar": [
+				{
+					"id": 1,
+					"title": "Home",
+					"linkText": "Home",
+					"action": "ResumoDashBoardComercial",
+					"url": "/comercial/ResumoDashBoardComercial"
+				},
+				{
+					"id": 2,
+					"title": "Lançamentos",
+					"linkText": "Lançamentos",
+					"action": "#"
+				},
+				{
+					"id": 3,
+					"title": "Metas por Período",
+					"linkText": "Metas por Período",
+					"action": "ActionPesquisaMetas",
+					"url": "/comercial/ActionPesquisaMetas"
+				},
+				{
+					"id": 4,
+					"title": "Premiações por Período (em construção)",
+					"linkText": "Premiações por Período",
+					"action": "ActionPesquisaPremiacoes",
+					"url": "/comercial/ActionPesquisaPremiacoes"
+				},
+				{
+					"id": 5,
+					"title": "Vendas por Período",
+					"linkText": "Vendas por Período",
+					"action": "ActionPesquisaVendasPeriodo",
+					"url": "/comercial/ActionPesquisaVendasPeriodo"
+				},
+				{
+					"id": 6,
+					"title": "Vendas por Marca",
+					"linkText": "Vendas por Marca",
+					"action": "ActionPesquisaVendasMarca",
+					"url": "/comercial/ActionPesquisaVendasMarca"
+				},
+				{
+					"id": 7,
+					"title": "Vendas Digitais",
+					"linkText": "Vendas Digitais",
+					"action": "ActionPesquisaVendasDigitalMarca",
+					"url": "/comercial/ActionPesquisaVendasDigitalMarca"
+				},
+				{
+					"id": 8,
+					"title": "Rotatividade",
+					"linkText": "Rotatividade",
+					"action": "ActionPesquisaRotatividade",
+					"url": "/comercial/ActionPesquisaRotatividade"
+				},
+				{
+					"id": 9,
+					"title": "Vendas e Estoques (Rel. 120)",
+					"linkText": "Vendas e Estoques (Rel. 120)",
+					"action": "ActionPesquisaVendasEstoque",
+					"url": "/comercial/ActionPesquisaVendasEstoque"
+				},
+				{
+					"id": 10,
+					"title": "Produtos / Preços",
+					"linkText": "Produtos / Preços",
+					"action": "ActionPesquisaProductoPreco",
+					"url": "/comercial/ActionPesquisaProductoPreco"
+				},
+				{
+					"id": 11,
+					"title": "Funcionários",
+					"linkText": "Funcionários",
+					"action": "ActionPesquisaFuncionario",
+					"url": "/comercial/ActionPesquisaFuncionario"
+				},
+				{
+					"id": 12,
+					"title": "Relatórios",
+					"linkText": "Relatórios",
+					"action": "ActionPesquisaVendasRelatorio",
+					"url": "/comercial/ActionPesquisaVendasRelatorio"
+				},
+				{
+					"id": 13,
+					"title": "Dpto Compras -> Estoque e Produtos",
+					"linkText": "Dpto Compras -> Estoque e Produtos",
+					"action": "ActionPesquisaEstoqueProdutos",
+					"url": "/comercial/ActionPesquisaEstoqueProdutos"
+				},
+				{
+					"id": 14,
+					"title": "Dpto Compras -> Estoque e Vendas / Grupo e Subgrupo",
+					"linkText": "Dpto Compras -> Estoque e Vendas / Grupo e Subgrupo",
+					"action": "ActionPesquisaEstoqueVendaGrupoSubGrupo",
+					"url": "/comercial/ActionPesquisaEstoqueVendaGrupoSubGrupo"
+				},
+				{
+					"id": 15,
+					"title": "Dpto Compras -> Estoque Loja Preço/ Grupo e Subgrupo",
+					"linkText": "Dpto Compras -> Estoque Loja Preço/ Grupo e Subgrupo",
+					"action": "ActionPesquisaPrecoProdutoGrupoSubGrupo",
+					"url": "/comercial/ActionPesquisaPrecoProdutoGrupoSubGrupo"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"nome": "Marketing",
+			"url": "/DashBoardMarketing",
+			"src": "./public/img/icons/marketing.png",
+			"alt": "Imagem modulo marketing",
+			"sideBar": [
+				{
+					"id": 1,
+					"title": "Home",
+					"linkText": "",
+					"action": ""
+				},
+				{
+					"id": 2,
+					"title": "Lançamentos",
+					"linkText": "Lançamentos",
+					"action": "#"
+				},
+				{
+					"id": 3,
+					"title": "Vendas Digitais",
+					"linkText": "Vendas Digitais",
+					"url": "/marketing/ActionPesquisaVendasDigitalMarca"
+				},
+				{
+					"id": 4,
+					"title": "Cadastros",
+					"linkText": "Cadastros",
+					"action": "#"
+				},
+				{
+					"id": 5,
+					"title": "Promoções",
+					"linkText": "Promoções",
+					"url": "/marketing/ActionPesquisaPromocao"
+				},
+				{
+					"id": 6,
+					"title": "Campanhas",
+					"linkText": "Campanhas",
+					"url": "/marketing/ActionPesquisaCampanha"
+				},
+				{
+					"id": 7,
+					"title": "Clientes",
+					"linkText": "Clientes",
+					"url": "/marketing/ActionPesquisaCliente"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"nome": "Compras",
+			"url": "/DashBoardCompras",
+			"src": "./public/img/icons/compras.png",
+			"alt": "Imagem modulo compras",
+			"sideBar": [
+				{
+					"id": 1,
+					"title": "Home",
+					"linkText": "Home",
+					"action": "ActionComprasHome",
+					"url": "/compras/ActionComprasHome"
+				},
+				{
+					"id": 2,
+					"title": "PEDIDOS",
+					"linkText": "Novo Pedido",
+					"action": "#"
+				},
+				{
+					"id": 3,
+					"title": "Novo Pedido",
+					"linkText": "Novo Pedido",
+					"action": "ActionPesquisaNovoPedido",
+					"url": "/compras/ActionPesquisaNovoPedido"
+				},
+				{
+					"id": 5,
+					"title": "Distribuição de Compras",
+					"linkText": "Distribuição de Compras",
+					"action": "#",
+					"url": "#"
+				},
+				{
+					"id": 6,
+					"title": "Imagem de Produtos",
+					"linkText": "Imagem de Produtos",
+					"action": "ActionPesquisaProduto",
+					"url": "/compras/ActionPesquisaProduto"
+				},
+				{
+					"id": 7,
+					"title": "-- CADASTROS --",
+					"linkText": "CADASTROS",
+					"action": "ListaVendasPIX",
+					"url": "/compras/ListaVendasPIX"
+				},
+				{
+					"id": 8,
+					"title": "Fornecedores",
+					"linkText": "Fornecedores",
+					"action": "ComprasFornecedor",
+					"url": "/compras/ComprasFornecedor"
+				},
+				{
+					"id": 9,
+					"title": "Fabricantes",
+					"linkText": "Fabricantes",
+					"action": "ComprasFabricante",
+					"url": "/compras/ComprasFabricante"
+				},
+				{
+					"id": 10,
+					"title": "Transportadoras",
+					"linkText": "Transportadoras",
+					"action": "PesquisaTransportador",
+					"url": "/compras/PesquisaTransportador"
+				},
+				{
+					"id": 11,
+					"title": "Condição de Pagamento",
+					"linkText": "Condição de Pagamento",
+					"action": "PesquisaCondicaoPagamento",
+					"url": "/compras/PesquisaCondicaoPagamento"
+				},
+				{
+					"id": 12,
+					"title": "Categoria Pedido",
+					"linkText": "Categoria Pedido",
+					"action": "ActionPesquisaCategoriaPedido",
+					"url": "/compras/ActionPesquisaCategoriaPedido"
+				},
+				{
+					"id": 13,
+					"title": "Grupo Estrutura Merc.",
+					"linkText": "Grupo Estrutura Merc.",
+					"action": "PesquisaGrupoEstrutura",
+					"url": "/compras/PesquisaGrupoEstrutura"
+				},
+				{
+					"id": 14,
+					"title": "Estrutura Mercadológica",
+					"linkText": "Estrutura Mercadológica",
+					"action": "ActionPesquisaSubGrupoEstrutura",
+					"url": "/compras/ActionPesquisaSubGrupoEstrutura"
+				},
+				{
+					"id": 15,
+					"title": "Unidade de Medida",
+					"linkText": "Unidade de Medida",
+					"action": "ActionPesquisaUnidadeMedida",
+					"url": "/compras/ActionPesquisaUnidadeMedida"
+				},
+				{
+					"id": 16,
+					"title": "Cores",
+					"linkText": "Cores",
+					"action": "ActionPesquisaCores",
+					"url": "/compras/ActionPesquisaCores"
+				},
+				{
+					"id": 17,
+					"title": "Estilos",
+					"linkText": "Estilos",
+					"action": "ActionPesquisaEstilos",
+					"url": "/compras/ActionPesquisaEstilos"
+				},
+				{
+					"id": 18,
+					"title": "Tipos de Tecidos",
+					"linkText": "Tipos de Tecidos",
+					"action": "ActionPesquisaTiposTecidos",
+					"url": "/compras/ActionPesquisaTiposTecidos"
+				},
+				{
+					"id": 19,
+					"url": "/compras/ActionPDFPedidoResumido"
+				},
+				{
+					"id": 20,
+					"url": "/compras/ActionPDFPedidoDetalhado"
+				}
+			]
+		},
+		
+		{
+			"id": 9,
+			"nome": "Contabilidade",
+			"url": "/DashBoardContabilidade",
+			"src": "./public/img/icons/contabilidade.png",
+			"alt": "Imagem modulo contabilidade",
+			"sideBar": [
+				{
+					"id": 1,
+					"title": "Home",
+					"linkText": "Home",
+					"url": "/contabilidade/ResumoDashBoardContabilidade"
+				},
+				{
+					"id": 2,
+					"title": "-- Lançamentos --",
+					"linkText": "Lançamentos",
+					"action": "#"
+				},
+				{
+					"id": 3,
+					"title": "Vendas por Período",
+					"linkText": "Vendas por Período",
+					"url": "/contabilidade/ActionPesquisaVendasMarca"
+				},
+				{
+					"id": 4,
+					"title": "Vendas Em Contingência",
+					"linkText": "Vendas Em Contingência",
+					"url": "/contabilidade/ActionPesquisaVendasContingencia"
+				}
+			]
+		},
+		{
+			"id": 10,
+			"nome": "Expedicao",
+			"url": "/DashBoardExpedicao",
+			"src": "./public/img/icons/expedicao.png",
+			"alt": "Imagem modulo expedicao",
+			"sideBar": [
+				{
+					"id": 1,
+					"title": "Home",
+					"linkText": "",
+					"action": ""
+				},
+				{
+					"id": 2,
+					"title": "-- Lançamentos --",
+					"linkText": "Lançamentos",
+					"action": "#"
+				},
+				{
+					"id": 3,
+					"title": "Ordem de Transferência",
+					"linkText": "Ordem de Transferência",
+					"action": "ActionPesquisaOT",
+					"url": "/expedicao/ActionPesquisaOT"
+				},
+				{
+					"id": 4,
+					"title": "Status Divergência",
+					"linkText": "Status Divergência",
+					"url": "/expedicao/ExpedicaoActionStatusDivergencia"
+				},
+				{
+					"id": 5,
+					"title": "Faturamento O.T.",
+					"linkText": "Faturamento O.T.",
+					"action": "ActionPesquisaFaturamentoOT",
+					"url": "/expedicao/ActionPesquisaFaturamentoOT"
+				}
+			]
+		},
+		{
+			"id": 11,
+			"nome": "ConferenciaCega",
+			"src": "./public/img/icons/conferenciaCega.png",
+			"url": "/DashBoardConferenciaCega",
+			"alt": "Imagem modulo conferencia cega",
+			"sideBar": [
+				{
+					"id": 1,
+					"title": "-- Lançamentos --",
+					"linkText": "-- Lançamentos --",
+					"action": "#",
+					"url": "#"
+				},
+				{
+					"id": 2,
+					"title": "Ordem de Transferência",
+					"linkText": "Ordem de Transferência",
+					"action": "ActionPesquisaOrdemTransferencia",
+					"url": "/conferenciaCega/ActionPesquisaOrdemTransferencia"
+				},
+				{
+					"id": 3,
+					"title": "Ordem de Transferência Depósito",
+					"linkText": "Ordem de Transferência Depósito",
+					"action": "ListaOrdemTransferenciaDeposito",
+					"url": "/conferenciaCega/ListaOrdemTransferenciaDeposito"
+				},
+				{
+					"id": 4,
+					"title": "-- CADASTROS --",
+					"linkText": "-- CADASTROS --",
+					"action": "#",
+					"url": "#"
+				},
+				{
+					"id": 5,
+					"title": "Status Divergência",
+					"linkText": "Status Divergência",
+					"action": "ActionPesquisaStatusDivergencia",
+					"url": "/conferenciaCega/ActionPesquisaStatusDivergencia"
+				}
+			]
+		},
+		{
+			"id": 12,
+			"nome": "Cadastro",
+			"url": "/DashBoardCadastro",
+			"src": "./public/img/icons/cadastro.png",
+			"alt": "Imagem modulo cadastro",
+			"sideBar": [
+				{
+					"id": 1,
+					"title": "Home",
+					"linkText": "Home",
+					"action": "ActionPesquisaHome",
+					"url": "/cadastro/ActionPesquisaHome"
+				},
+				{
+					"id": 2,
+					"title": "Pedidos",
+					"linkText": "Pedidos",
+					"action": "#"
+				},
+				{
+					"id": 3,
+					"title": "Recepção NFe / Pedido",
+					"linkText": "Recepção NFe / Pedido",
+					"action": "ReceberNFePedido",
+					"url": "/cadastro/ReceberNFePedido"
+				},
+				{
+					"id": 4,
+					"title": "Cadastros",
+					"linkText": "Cadastros",
+					"action": "#"
+				},
+				{
+					"id": 5,
+					"title": "Produtos Avulso",
+					"linkText": "Produtos Avulso",
+					"action": "ActionPesquisaProdutosAvulso",
+					"url": "/cadastro/ActionPesquisaProdutosAvulso"
+				},
+				{
+					"id": 6,
+					"title": "Estilos",
+					"linkText": "Estilos",
+					"action": "ListaEstilos",
+					"url": "/cadastro/ActionPesquisaEstilo"
+				},
+				{
+					"id": 7,
+					"title": "NOTAS FISCAIS",
+					"linkText": "NOTAS FISCAIS",
+					"action": "#"
+				},
+				{
+					"id": 8,
+					"title": "Cadastro de Notas Fiscais",
+					"linkText": "Cadastro de Notas Fiscais",
+					"action": "CadastroActionCadEditNFE",
+					"url": "/cadastro/CadastroActionCadEditNFE"
+				},
+				{
+					"id": 9,
+					"title": "Produtos",
+					"linkText": "Produtos",
+					"action": "#"
+				},
+				{
+					"id": 10,
+					"title": "Lista de Preço",
+					"linkText": "Lista de Preço",
+					"action": "ActionPesquisaPreco",
+					"url": "/cadastro/ActionPesquisaPreco"
+				},
+				{
+					"id": 11,
+					"title": "Alteração de Preço",
+					"linkText": "Alteração de Preço",
+					"action": "ActionPesquisaAlteracaoPreco",
+					"url": "/cadastro/ActionPesquisaAlteracaoPreco"
+				},
+				{
+					"id": 12,
+					"title": "Etiquetas",
+					"linkText": "Etiquetas",
+					"action": "ActionPesquisaAlteracaoPreco",
+					"url": "/cadastro/ActionPesquisaAlteracaoPreco"
+				}
+			]
+		},
+		{
+			"id": 13,
+			"nome": "Etiquetagem",
+			"url": "/DashBoardEtiquetagem",
+			"src": "./public/img/icons/etiqueta.png",
+			"alt": "Imagem modulo cadastro",
+			"sideBar": [
+				{
+					"id": 1,
+					"title": "Home",
+					"linkText": "Home",
+					"action": "ActionPesquisaProdutoEtiqueta",
+					"url": "/etiquetagem/ActionPesquisaProdutoEtiqueta"
+				}
+			]
+		}
+	]
+}

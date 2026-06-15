@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Softquality Sap">
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./public/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/img/favicon/favicon-32x32.png">
+  <link rel="mask-icon" href="./public/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="preload" as="image" href="/src/assets/hero-image.jpg">
+  <!-- Call App Mode on ios devices -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <!-- Remove Tap Highlight on Windows Phone IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- base css -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" /> -->
+  <link rel="stylesheet" media="screen, print" href="css/vendors.bundle.css" />
+  <link rel="stylesheet" media="screen, print" href="css/app.bundle.css" />
+  <link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
+  <link ref="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-dark.min.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen, print" href="css/theme-demo.css">
+
+
+  <!-- Optional: page related CSS-->
+  <!-- <link rel="stylesheet" media="screen, print" href="css/fa-brands.css">
+  <link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
+  <link rel="stylesheet" media="screen, print" href="css/notifications/sweetalert2/sweetalert2.bundle.css">
+  <link rel="stylesheet" media="screen, print" href="css/formplugins/select2/select2.bundle.css"> -->
+  <title> - Softquality SAP</title>
+
+  <script>
+    let pathname = window.location.pathname;
+    let filename = pathname.split('/').pop();
+    document.title = filename + ' - Softquality SAP';
+  </script>
+</head>
+
+<body>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <!-- <script src="%PUBLIC_URL%/BrowserPrint-3.0.216.min.js"></script> -->
+
+</body>
+
+</html>

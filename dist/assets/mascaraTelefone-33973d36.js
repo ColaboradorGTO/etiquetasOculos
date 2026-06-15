@@ -1,0 +1,1 @@
+const r=e=>e?(e=e.replace(/\D/g,""),e.length<=10?e.replace(/(\d{2})(\d{4})(\d{4})/,"($1) $2-$3"):e.replace(/(\d{2})(\d{1})(\d{4})(\d{4})/,"($1) $2 $3-$4")):"",n=e=>e?e.replace(/\D/g,""):"";export{r as m,n as r};
