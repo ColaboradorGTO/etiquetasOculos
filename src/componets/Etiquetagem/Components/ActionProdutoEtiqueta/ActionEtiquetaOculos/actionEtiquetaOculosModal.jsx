@@ -74,7 +74,7 @@ export const ActionEtiquetaOculosModal = ({
             ${startPageLabel}
             ^FO5,25^A0,40,${widthFontPrecoVenda}^FB268,1,1,C,0^FD${precoVenda}^FS
             ^BY1.6,3,500
-            ^FO280,10
+            ^FO290,5
             ^BEN,55,Y,N
             ^FD${codBarras}^FS
             ${endPageLabel}
