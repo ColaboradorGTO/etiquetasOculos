@@ -235,7 +235,6 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
         linkComponentAnterior={["Home"]}
         linkComponent={[""]}
         title="Etiquetagem"
-        subTitle={`ID Funcionario: ${idFuncionario}`}
 
         InputSelectEmpresaComponent={InputSelectAction}
         labelSelectEmpresa={"Lista de Preços"}
