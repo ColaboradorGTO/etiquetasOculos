@@ -47,6 +47,17 @@ export const ActionEtiquetaOculosModal = ({
         ^LL80
         ^CI28
       `;
+      const zplResetConfiguracao = `
+        ^XA
+        ^PR2
+        ^MD15
+        ^FWN
+        ^PW800
+        ^LL80
+        ^CI28
+        ^XZ
+      `;
+
       let endPageLabel = '^XZ';
       let dataLabelsZPL = '';
 
@@ -86,7 +97,9 @@ export const ActionEtiquetaOculosModal = ({
         .replace(/^[ \t]+/gm, '')
         .replace(/^\s*$/gm, '');
 
-      await enviarZPLParaImpressora(comandosZPLFinais);
+      const comandosZPLComReset = `${comandosZPLFinais}${zplResetConfiguracao}`;
+
+      await enviarZPLParaImpressora(comandosZPLComReset);
 
     } catch (error) {
       console.error('❌ Erro ao gerar/imprimir comandos ZPL:', error);

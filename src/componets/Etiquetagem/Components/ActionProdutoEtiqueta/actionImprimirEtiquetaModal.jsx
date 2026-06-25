@@ -40,6 +40,15 @@ export const ActionImprimirEtiquetaModal = ({
         ^LL320
         ^CI28
       `;
+      const zplResetConfiguracao = `
+        ^XA
+        ^MD10
+        ^FWN
+        ^PW850
+        ^LL320
+        ^CI28
+        ^XZ
+      `;
       let endPageLabel = '^XZ';
       let dataLabelsZPLToPrint = startPageLabel;
       let contador = 0;
@@ -137,7 +146,7 @@ export const ActionImprimirEtiquetaModal = ({
       }
 
       // Envia para impressora via WebSocket
-      await enviarZPLParaImpressora(comandosZPLFinais);
+      await enviarZPLParaImpressora(`${comandosZPLFinais}${zplResetConfiguracao}`);
 
     } catch (error) {
       console.error('❌ Erro ao gerar/imprimir comandos ZPL:', error);
