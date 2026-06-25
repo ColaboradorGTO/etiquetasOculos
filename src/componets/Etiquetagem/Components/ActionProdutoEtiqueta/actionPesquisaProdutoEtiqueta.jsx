@@ -118,12 +118,25 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
   );
 
   const handleClick = () => {
-    if (codBarrasProduto === '' && descricaoProduto === '' && idProduto === '') {
+    const semEmpresaSelecionada = !empresaSelecionada;
+    const semFiltrosDePesquisa = codBarrasProduto === '' && descricaoProduto === '' && idProduto === '';
+
+    if (semEmpresaSelecionada) {
       Swal.fire({
-        title: '<span style="font-size: 18px;">Digite o Identificador, Descrição ou Código de Barras do Produto!</span>',
-        html: '<span style="font-size: 16px;">Digite o Identificador, Descrição ou Código de Barras do Produto!</span>',
+        title: '<span style="font-size: 18px;">Selecione uma Lista de Preços!</span>',
+        html: '<span style="font-size: 16px;">Selecione uma Lista de Preços!</span>',
         icon: 'warning',
       })
+      return;
+    }
+
+    if (semFiltrosDePesquisa) {
+      Swal.fire({
+        title: 'Atenção!',
+        html: 'Preencha ao menos um campo de pesquisa: Cód.Barras, Id. Produto ou Descrição.',
+        icon: 'warning',
+      })
+      return;
     } else {
       refetchListaPrecosSap();
 

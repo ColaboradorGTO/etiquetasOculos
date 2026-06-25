@@ -310,13 +310,28 @@ export const ActionListaProdutoEtiqueta = ({
               value={produtosSelecionados.find(p => p.IDPRODUTO === row.IDPRODUTO)?.quantidade || 1}
               onChange={(e) => {
                 const novaQuantidade = parseInt(e.target.value, 10) || 1;
-                setProdutosSelecionados(prevProdutos =>
-                  prevProdutos.map(prod =>
+                const produtoJaSelecionado = selectedIds.includes(row.IDPRODUTO);
+
+                if (!produtoJaSelecionado) {
+                  setSelectedIds((prevIds) => [...prevIds, row.IDPRODUTO]);
+                  setSelectedItems((prevItems) => [...prevItems, row]);
+                  setSelectAll(false);
+                  setBtnVisivel(true);
+                }
+
+                setProdutosSelecionados((prevProdutos) => {
+                  const produtoExiste = prevProdutos.some((prod) => prod.IDPRODUTO === row.IDPRODUTO);
+
+                  if (!produtoExiste) {
+                    return [...prevProdutos, { ...row, quantidade: novaQuantidade }];
+                  }
+
+                  return prevProdutos.map((prod) =>
                     prod.IDPRODUTO === row.IDPRODUTO
                       ? { ...prod, quantidade: novaQuantidade }
                       : prod
-                  )
-                );
+                  );
+                });
               }}
               style={{ width: '100%' }}
             />
