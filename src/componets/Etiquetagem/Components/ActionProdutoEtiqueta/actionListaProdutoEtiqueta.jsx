@@ -33,22 +33,6 @@ export const ActionListaProdutoEtiqueta = ({
   const [rows, setRows] = useState(10);
   const dataTableRef = useRef();
 
-  const setQtdProduto = (idProduto, novaQuantidade) => {
-    setProdutosSelecionados((prevProdutos) => {
-      const produtoExiste = prevProdutos.some((produto) => produto.IDPRODUTO === idProduto);
-
-      if (!produtoExiste) {
-        return [...prevProdutos, { IDPRODUTO: idProduto, quantidade: Number(novaQuantidade) }];
-      }
-
-      return prevProdutos.map((produto) =>
-        produto.IDPRODUTO === idProduto
-          ? { ...produto, quantidade: Number(novaQuantidade) }
-          : produto
-      );
-    });
-  };
-
   const onGlobalFilterChange = (e) => {
     setGlobalFilterValue(e.target.value);
   };
@@ -253,21 +237,37 @@ export const ActionListaProdutoEtiqueta = ({
               type="checkbox"
               checked={selectedIds.includes(rowData.IDPRODUTO)}
               onChange={(e) => {
-                const isChecked = e.target.checked
-                const updatedSelectedIds = e.target.checked
+                const isChecked = e.target.checked;
+                const updatedSelectedIds = isChecked
                   ? [...selectedIds, rowData.IDPRODUTO]
                   : selectedIds.filter(id => id !== rowData.IDPRODUTO);
+
                 setSelectedIds(updatedSelectedIds);
-                setQtdProduto(rowData.IDPRODUTO, isChecked)
                 setSelectAll(updatedSelectedIds.length === dados.length);
-                setProdutosSelecionados(isChecked ? [...produtosSelecionados, rowData] : produtosSelecionados.filter(item => item.IDPRODUTO !== rowData.IDPRODUTO));
-                if (isChecked) {
-                  setBtnVisivel(true);
+                setSelectedItems((prevItems) =>
+                  isChecked
+                    ? [...prevItems, rowData]
+                    : prevItems.filter(item => item.IDPRODUTO !== rowData.IDPRODUTO)
+                );
 
-                } else {
-                  setBtnVisivel(false);
+                setProdutosSelecionados((prevProdutos) => {
+                  if (!isChecked) {
+                    return prevProdutos.filter(item => item.IDPRODUTO !== rowData.IDPRODUTO);
+                  }
 
-                }
+                  const produtoExistente = prevProdutos.find(item => item.IDPRODUTO === rowData.IDPRODUTO);
+                  const quantidadeAtual = Number(produtoExistente?.quantidade) || 1;
+
+                  if (produtoExistente) {
+                    return prevProdutos.map((item) =>
+                      item.IDPRODUTO === rowData.IDPRODUTO
+                        ? { ...item, ...rowData, quantidade: quantidadeAtual }
+                        : item
+                    );
+                  }
+
+                  return [...prevProdutos, { ...rowData, quantidade: quantidadeAtual }];
+                });
               }}
               disabled={rowData.stDisabled === 'disabled'}
             />

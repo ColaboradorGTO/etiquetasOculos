@@ -31,11 +31,32 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
   const [modalImprimirEtiquetaOculos, setModalImprimirEtiquetaOculos] = useState(false);
   const [selectAll, setSelectAll] = useState(false);
   const [selectedIds, setSelectedIds] = useState([]);
+
+  useEffect(() => {
+    const mapaProdutos = new Map();
+
+    produtosSelecionados.forEach((produto) => {
+      mapaProdutos.set(produto.IDPRODUTO, {
+        quantidade: Number(produto.quantidade) || 1,
+        NUCODBARRAS: produto.NUCODBARRAS,
+        DSNOME: produto.DSNOME,
+        TAMANHO: produto.TAMANHO,
+        PRECOVENDA: produto.PRECOVENDA,
+        DSESTILO: produto.DSESTILO,
+        DSLISTAPRECO: produto.DSLISTAPRECO,
+        DSLOCALEXPOSICAO: produto.DSLOCALEXPOSICAO,
+        IDPRODUTO: produto.IDPRODUTO,
+        MARCA: produto.MARCA,
+      });
+    });
+
+    setDadosAcumuladorEtiquetas(Array.from(mapaProdutos.values()));
+  }, [produtosSelecionados]);
   const [idFuncionario] = useState(() => {
     const params = new URLSearchParams(window.location.search);
     return params.get('idFuncionario');
   });
-  console.log('ID Funcionario:', idFuncionario);
+
   const { data: optionsEmpresas = [], error: errorEmpresas, isLoading: isLoadingEmpresas, refetch: refetchEmpresas
   } = useQuery(
     ['empresasLista'],
@@ -174,7 +195,7 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
     setSelectedIds(updatedSelectedIds);
     setProdutosSelecionados([]);
     setDadosAcumuladorEtiquetas([]);
-    setCopiaEtiqueta(1);
+    setCopia(1);
     Swal.fire({
       icon: 'success',
       title: 'Cancelado com sucesso',
@@ -197,37 +218,24 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
   const handleAcumuladorEtiquetas = async () => {
     if (produtosSelecionados.length > 0) {
       try {
-        setDadosAcumuladorEtiquetas((prev) => {
-          let listaAtualizada = [...prev];
+        const mapaProdutos = new Map();
 
-          produtosSelecionados.forEach((produto) => {
-            const indexExistente = listaAtualizada.findIndex(
-              (item) => item.IDPRODUTO === produto.IDPRODUTO
-            );
-
-            if (indexExistente !== -1) {
-              listaAtualizada[indexExistente] = {
-                ...listaAtualizada[indexExistente],
-                quantidade: Number(produto.quantidade) || 1,
-              };
-            } else {
-              listaAtualizada.push({
-                quantidade: produto.quantidade,
-                NUCODBARRAS: produto.NUCODBARRAS,
-                DSNOME: produto.DSNOME,
-                TAMANHO: produto.TAMANHO,
-                PRECOVENDA: produto.PRECOVENDA,
-                DSESTILO: produto.DSESTILO,
-                DSLISTAPRECO: produto.DSLISTAPRECO,
-                DSLOCALEXPOSICAO: produto.DSLOCALEXPOSICAO,
-                IDPRODUTO: produto.IDPRODUTO,
-                MARCA: produto.MARCA,
-              });
-            }
+        produtosSelecionados.forEach((produto) => {
+          mapaProdutos.set(produto.IDPRODUTO, {
+            quantidade: Number(produto.quantidade) || 1,
+            NUCODBARRAS: produto.NUCODBARRAS,
+            DSNOME: produto.DSNOME,
+            TAMANHO: produto.TAMANHO,
+            PRECOVENDA: produto.PRECOVENDA,
+            DSESTILO: produto.DSESTILO,
+            DSLISTAPRECO: produto.DSLISTAPRECO,
+            DSLOCALEXPOSICAO: produto.DSLOCALEXPOSICAO,
+            IDPRODUTO: produto.IDPRODUTO,
+            MARCA: produto.MARCA,
           });
-
-          return listaAtualizada;
         });
+
+        setDadosAcumuladorEtiquetas(Array.from(mapaProdutos.values()));
 
         Swal.fire({
           icon: "success",
