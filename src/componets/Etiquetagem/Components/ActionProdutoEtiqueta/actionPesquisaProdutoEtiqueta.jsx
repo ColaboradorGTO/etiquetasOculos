@@ -206,7 +206,10 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
             );
 
             if (indexExistente !== -1) {
-              listaAtualizada[indexExistente].quantidade += produto.quantidade;
+              listaAtualizada[indexExistente] = {
+                ...listaAtualizada[indexExistente],
+                quantidade: Number(produto.quantidade) || 1,
+              };
             } else {
               listaAtualizada.push({
                 quantidade: produto.quantidade,
@@ -231,7 +234,6 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
           title: "Dados Salvos",
           text: "Os dados foram adicionados à lista!",
         });
-
       } catch (error) {
         Swal.fire({
           icon: "error",
@@ -241,6 +243,7 @@ export const ActionPesquisaProdutoEtiqueta = ({  }) => {
       }
     }
   };
+  console.log("Dados Acumulador Etiquetas:", dadosAcumuladorEtiquetas);
 
   return (
     <Fragment>
