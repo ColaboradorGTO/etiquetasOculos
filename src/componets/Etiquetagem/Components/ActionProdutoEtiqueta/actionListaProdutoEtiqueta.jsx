@@ -256,7 +256,7 @@ export const ActionListaProdutoEtiqueta = ({
                   }
 
                   const produtoExistente = prevProdutos.find(item => item.IDPRODUTO === rowData.IDPRODUTO);
-                  const quantidadeAtual = Number(produtoExistente?.quantidade) || 1;
+                  const quantidadeAtual = Number(produtoExistente?.quantidade) || 0;
 
                   if (produtoExistente) {
                     return prevProdutos.map((item) =>
@@ -303,13 +303,18 @@ export const ActionListaProdutoEtiqueta = ({
       field: 'quantidade',
       header: 'Quantidade',
       body: (row) => {
+        const produtoSelecionado = produtosSelecionados.find(p => p.IDPRODUTO === row.IDPRODUTO);
+        const quantidadeAtual = produtoSelecionado 
+          ? (produtoSelecionado.quantidade ?? 1) 
+          : 1;
+
         return (
           <div style={{ background: '', width: '50%' }}>
             <input
               type="number"
-              value={produtosSelecionados.find(p => p.IDPRODUTO === row.IDPRODUTO)?.quantidade || 1}
+              value={quantidadeAtual}
               onChange={(e) => {
-                const novaQuantidade = parseInt(e.target.value, 10) || 1;
+                const novaQuantidade = e.target.value;
                 const produtoJaSelecionado = selectedIds.includes(row.IDPRODUTO);
 
                 if (!produtoJaSelecionado) {
@@ -329,6 +334,17 @@ export const ActionListaProdutoEtiqueta = ({
                   return prevProdutos.map((prod) =>
                     prod.IDPRODUTO === row.IDPRODUTO
                       ? { ...prod, quantidade: novaQuantidade }
+                      : prod
+                  );
+                });
+              }}
+              onBlur={(e) => {
+                const valor = e.target.value === '' ? 1 : parseInt(e.target.value, 10) || 1;
+
+                setProdutosSelecionados((prevProdutos) => {
+                  return prevProdutos.map((prod) =>
+                    prod.IDPRODUTO === row.IDPRODUTO
+                      ? { ...prod, quantidade: valor }
                       : prod
                   );
                 });
