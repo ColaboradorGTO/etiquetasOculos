@@ -34,7 +34,6 @@ export const ActionImprimirEtiquetaModal = ({
       // Início da página ZPL
       let startPageLabel = `
         ^XA
-        ^MD10
         ^FWN
         ^PW850
         ^LL320
@@ -88,23 +87,23 @@ export const ActionImprimirEtiquetaModal = ({
           let priceLength = precoVenda.length;
           let ajustePositionPrice = priceLength > 7 ? (priceLength - 7) * 15 : 0;
           let ajusteFontSizePrice = priceLength <= 11 ? 0 : 5;
-          let positionDefault = (contador * 280);
+          let positionDefault = (contador * 280) + 5;
           let positionPrice = 135 + positionDefault - ajustePositionPrice;
-          let positionTamanho = 10 + positionDefault;
-          let positionCodBars = 30 + positionDefault;
+          let positionTamanho = positionDefault + (tamanhoProd.length == 1 ? 15 : tamanhoProd.length == 2 ? 10 : 5 );
+          let positionCodBars = 40 + positionDefault;
           let fontSizePrice = 35 - ajusteFontSizePrice;
-          let widthBorder = tamanhoProd.length > 3 ? '75' : '50';
+          let widthBorder = 50 + ( tamanhoProd.length > 2 ? 10 : 0 );
           let abrirMaisUmaPagina = (j + 1) < qtdEtiqueta || (i + 1) < etiquetas.length;
 
           dataLabelsZPLToPrint += `
-            ^FO${positionDefault},120^A0N,20,30^FB255,4,2,L,0^FD${descricaoProd}^FS
-            ^FO${positionDefault},205^A0N,20,25^FB255,3,2,L,0^FD${estiloProd}^FS
-            ^FO${positionDefault},245^A0N,20,25^FB255,3,2,L,0^FD${localExpProd}^FS
-            ^FO${positionDefault},285^GB${widthBorder},50,3^FS
-            ^FO${positionDefault},265^A0N,22^FDTAM^FS
-            ^FO${positionPrice},300^A0,${fontSizePrice}^FD${precoVenda}^FS
-            ^FO${positionTamanho},300^A0N,22^FD${tamanhoProd}^FS
-            ^FO${positionCodBars},340^BEN,55,Y,N^FD${codBarras}^FS
+             ^FO${positionDefault},110^A0N,22,28^FB265,4,1,L,0^FD${descricaoProd}^FS
+          ^FO${positionDefault},210^A0N,22,20^FB265,2,0,L,0^FD${estiloProd}^FS
+          ^FO${positionDefault},260^A0N,22,20^FB265,2,0,L,0^FD${localExpProd}^FS
+          ^FO${positionDefault},285^A0N,22,28^FDTAM^FS
+          ^FO${positionDefault},302^GB${widthBorder},30,3^FS
+          ^FO${positionTamanho},309^A0N,22,28^FD${tamanhoProd}^FS
+          ^FO${positionPrice},300^A0,${fontSizePrice}^FD${precoVenda}^FS
+          ^FO${positionCodBars},335^BEN,55,Y,N^FD${codBarras}^FS
           `;
 
 
