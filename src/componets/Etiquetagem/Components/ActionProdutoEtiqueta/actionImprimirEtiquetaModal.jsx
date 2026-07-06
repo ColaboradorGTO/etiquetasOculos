@@ -106,15 +106,6 @@ export const ActionImprimirEtiquetaModal = ({
           ^FO${positionCodBars},335^BEN,55,Y,N^FD${codBarras}^FS
           `;
 
-
-          // dataLabelsZPLToPrint += `^FO${positionDefault},120^A0N,20,30^FB255,4,2,L,0^FD${descricaoProd}^FS`;
-          // dataLabelsZPLToPrint += `^FO${positionDefault},205^A0N,20,25^FB255,3,2,L,0^FD${estiloProd}^FS`;
-          // dataLabelsZPLToPrint += `^FO${positionDefault},245^A0N,20,25^FB255,3,2,L,0^FD${localExpProd}^FS`;
-          // dataLabelsZPLToPrint += `^FO${positionDefault},285^GB${widthBorder},50,3^FS`;
-          // dataLabelsZPLToPrint += `^FO${positionDefault},265^A0N,22^FDTAM^FS`;
-          // dataLabelsZPLToPrint += `^FO${positionPrice},300^A0,${fontSizePrice}^FD${precoVenda}^FS`;
-          // dataLabelsZPLToPrint += `^FO${positionTamanho},300^A0N,22^FD${tamanhoProd}^FS`;
-          // dataLabelsZPLToPrint += `^FO${positionCodBars},340^BEN,55,Y,N^FD${codBarras}^FS`;
           contador++;
 
           
