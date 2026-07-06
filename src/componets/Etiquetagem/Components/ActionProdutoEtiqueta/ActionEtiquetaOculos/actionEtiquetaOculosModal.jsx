@@ -10,7 +10,7 @@ import { enviarZPLParaImpressora } from "../../../../../utils/labelPrinterServic
 import Swal from "sweetalert2";
 import { HeaderModal } from "../../../../Modais/HeaderModal/HeaderModal";
 import { FooterModal } from "../../../../Modais/FooterModal/footerModal";
-
+ 
 const calcularEstiloPreco = (precoFormatado) => {
   const length = precoFormatado.length;
   let fontSize = 1.2;
