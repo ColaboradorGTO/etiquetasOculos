@@ -256,7 +256,7 @@ export const ActionListaProdutoEtiqueta = ({
                   }
 
                   const produtoExistente = prevProdutos.find(item => item.IDPRODUTO === rowData.IDPRODUTO);
-                  const quantidadeAtual = Number(produtoExistente?.quantidade) || 0;
+                  const quantidadeAtual = Number(produtoExistente?.quantidade) || 1;
 
                   if (produtoExistente) {
                     return prevProdutos.map((item) =>

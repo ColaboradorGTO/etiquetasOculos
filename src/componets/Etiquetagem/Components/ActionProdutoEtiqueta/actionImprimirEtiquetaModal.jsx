@@ -39,6 +39,7 @@ export const ActionImprimirEtiquetaModal = ({
         ^PW850
         ^LL320
         ^CI28
+        ^BY2,3,55
       `;
       const zplResetConfiguracao = `
         ^XA
@@ -96,7 +97,6 @@ export const ActionImprimirEtiquetaModal = ({
           let abrirMaisUmaPagina = (j + 1) < qtdEtiqueta || (i + 1) < etiquetas.length;
 
 
-          // Adiciona comandos ZPL para a etiqueta (sem quebras de linha desnecessárias)
           dataLabelsZPLToPrint += `^FO${positionDefault},120^A0N,20,30^FB255,4,2,L,0^FD${descricaoProd}^FS`;
           dataLabelsZPLToPrint += `^FO${positionDefault},205^A0N,20,25^FB255,3,2,L,0^FD${estiloProd}^FS`;
           dataLabelsZPLToPrint += `^FO${positionDefault},245^A0N,20,25^FB255,3,2,L,0^FD${localExpProd}^FS`;
@@ -104,14 +104,10 @@ export const ActionImprimirEtiquetaModal = ({
           dataLabelsZPLToPrint += `^FO${positionDefault},265^A0N,22^FDTAM^FS`;
           dataLabelsZPLToPrint += `^FO${positionPrice},300^A0,${fontSizePrice}^FD${precoVenda}^FS`;
           dataLabelsZPLToPrint += `^FO${positionTamanho},300^A0N,22^FD${tamanhoProd}^FS`;
-          dataLabelsZPLToPrint += `^BY1.6,3,500`;
-          dataLabelsZPLToPrint += `^FO${positionCodBars},340`;
-          dataLabelsZPLToPrint += `^BEN,55,Y,N`;
-          dataLabelsZPLToPrint += `^FD${codBarras}^FS`;
-
+          dataLabelsZPLToPrint += `^FO${positionCodBars},340^BEN,55,Y,N^FD${codBarras}^FS`;
           contador++;
 
-          // Se completou 3 etiquetas por página, finaliza página
+          
           if (contador === 3) {
             dataLabelsZPLToPrint += endPageLabel;
 
@@ -124,19 +120,19 @@ export const ActionImprimirEtiquetaModal = ({
         }
       }
   
-      // Finaliza última página se necessário
+     
       if (contador !== 0) {
         dataLabelsZPLToPrint += endPageLabel;
       }
 
-      // Limpa formatação e cria comandos finais
+      
       const comandosZPLFinais = dataLabelsZPLToPrint
         .replace(/^[ \t]+/gm, '')
         .replace(/^\s*$/gm, '')
-        .replace(/\n+/g, '\n')  // Remove múltiplas quebras de linha
+        .replace(/\n+/g, '\n')  
         .trim();
 
-      // Validação final antes de enviar
+   
       if (comandosZPLFinais.length < 10) {
         throw new Error('Comandos ZPL muito curtos - possível erro na geração');
       }
