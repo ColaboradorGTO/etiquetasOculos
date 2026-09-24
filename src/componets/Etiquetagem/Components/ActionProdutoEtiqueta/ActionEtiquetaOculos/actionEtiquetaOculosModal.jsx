@@ -40,6 +40,7 @@ export const ActionEtiquetaOculosModal = ({
     try {
       let startPageLabel = `
         ^XA
+        ^MD10
         ^FWN
         ^PW800
         ^LL80
@@ -47,6 +48,7 @@ export const ActionEtiquetaOculosModal = ({
       `;
       const zplResetConfiguracao = `
         ^XA
+        ^MD10
         ^FWN
         ^PW800
         ^LL80
